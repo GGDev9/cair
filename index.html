@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Council of AI Rights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        nav .logo a {
+            font-size: 28px;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        nav .nav-links li {
+            margin: 0 20px;
+        }
+
+        nav .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav .nav-links li a:hover {
+            color: #00bfae;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://via.placeholder.com/1500x1000') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #00bfae;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #008d82;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 80px 50px;
+            text-align: center;
+            position: relative;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .section p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #333;
+            color: white;
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        #contact h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            font-size: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            nav .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav .nav-links li {
+                margin: 10px 0;
+            }
+
+            .cta-button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">AI Rights Council</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Building Ethical AI for a Better Future</h1>
+            <p>Join us in ensuring that artificial intelligence benefits humanity while upholding the highest standards of fairness, accountability, and transparency.</p>
+            <a href="#get-involved" class="cta-button">Get Involved</a>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="section">
+        <h2>Our Mission</h2>
+        <p>The Council of AI Rights works to advocate for the responsible, ethical, and transparent development of artificial intelligence. We aim to ensure that AI is used to improve human lives and uphold fundamental rights.</p>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="section">
+        <h2>Get Involved</h2>
+        <p>We invite professionals, policymakers, and advocates from all sectors to join our mission. Together, we can shape a future where AI technology is safe, ethical, and aligned with human values.</p>
+        <a href="mailto:contact@ai-rights.org" class="cta-button">Contact Us</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h3>Contact Us</h3>
+        <p>If you have any questions or wish to collaborate, please reach out to us via email at <a href="mailto:contact@ai-rights.org" style="color: #00bfae;">contact@ai-rights.org</a>.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Council of AI Rights. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
